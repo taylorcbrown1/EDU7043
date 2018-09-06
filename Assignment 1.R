@@ -11,7 +11,7 @@ library(readr)
 prb<-read_csv(file = https://raw.githubusercontent.com/mattdemography/EDU_7043/master/Data/Assignment_1.csv)
 library(readr)
 prb<-read_csv(file ="https://raw.githubusercontent.com/mattdemography/EDU_7043/master/Data/Assignment_1.csv")
-names(prb) #print the column names
+names(prb) #print the column names 
 View(prb) #open it in a viewer
 table(state.abb)
 
