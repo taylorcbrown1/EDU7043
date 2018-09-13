@@ -1,0 +1,31 @@
+x<-c(5,10,15,20,25,30)
+y<-c(-1,NA, 75,3,5,8)
+z<-c(5)
+
+x*z
+y*z
+
+Mario<-(x*z)
+Luigi<-(y*z)
+
+print(Mario)
+print(Luigi)
+
+y<-ifelse(is.na(y), 2.5, y)
+
+library(readr)
+asmt<-read.csv(file="https://raw.githubusercontent.com/mattdemography/EDU_7043/master/Data/Assignment_1.csv")
+
+head (state.abb,n=10)
+
+head (state.abb,n=10)
+#ignore. Did it double
+mean(asmt$Murder)
+median(asmt$Murder)
+
+#Lets see if this works??
+NEWEata<-subset(asmt,State=="CT"|State=="ME"|State=="MA"|State=="NH"|State=="RI"|State=="VT")
+mean(NEWEata$Murder)
+#Yes
+
+#BONUS??? lkSEARflaehjl UGH
