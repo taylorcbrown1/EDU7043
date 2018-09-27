@@ -1,0 +1,27 @@
+#Load the data via MacOS
+m<-read.csv(file = "/Users/taylorbrown/Lesbian Christian Identity CSV.csv")
+getwd()              
+wow<-read.csv(file = "/Users/taylorbrown/Desktop/Lesbian Christian Identity CSV.csv")              
+
+#get that info
+names(wow)
+str(wow)
+
+#Central tendancy time 
+summary(wow$CLERGY)
+mode(wow$CLERGY)
+summary(wow$AGE)
+mode(wow$AGE)
+summary(wow$RACE)
+mode(wow$RACE)
+summary(wow$EDUC)
+mode(wow$EDUC)
+summary(wow$SIBS)
+mode(wow$SIBS)
+
+#histogram timmmeee
+hist(wow$CLERGY)
+
+#stand dv and Var
+var(wow$CLERGY)
+sd(wow$CLERGY)
