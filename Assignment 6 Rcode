@@ -1,0 +1,36 @@
+CHURCH<-read.csv(file = "/Users/taylorbrown/Desktop/Lesbian Christian Identity.csv", stringsAsFactors=F)
+
+#general sum info-
+summary(CHURCH$CLERGY)
+summary(CHURCH$EVANG)
+summary(CHURCH$SEXORI)
+Lesbiansub<-subset (CHURCH, CHURCH$SEXORI ==1)
+Clergysub<-subset (CHURCH, CHURCH$CLERGY ==1)
+EVANsub<-subset (CHURCH, CHURCH$EVANG ==1)
+ALL <-  rbind(Lesbiansub, Clergysub, EVANsub)
+
+#tables
+table(ALL$CLERGY)
+
+table(ALL$EVANG)
+
+table(ALL$SEXORI)
+
+
+#running cor
+cor(ALL$SEXORI, ALL$CLERGY, method="spearman")
+cor.test(ALL$SEXORI, ALL$CLERGY)
+
+cor(ALL$SEXORI, ALL$EVANG, method="pearson")
+cor.test(ALL$SEXORI, ALL$EVANG)
+
+#method="spearman" checks out okay
+cor(ALL$SEXORI, ALL$CLERGY, method="spearman")
+
+cor(ALL$SEXORI, ALL$EVANG, method="spearman")
+
+plot(ALL$SEXORI, ALL$CLERGY, main="Correlation Between Clergy and Sexual Orientation", xlab="Sexual Orientation", ylab="Clergy")
+
+plot(ALL$SEXORI, ALL$EVANG, main="Correlation Between Evangelicals and Sexual Oreintation", xlab="Sexual Orientation", ylab="Evangelical")
+boxplot(ALL$SEXORI, ALL$EVANG)
+boxplot(ALL$SEXORI, ALL$CLERGY)
